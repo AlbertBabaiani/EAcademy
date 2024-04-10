@@ -1,0 +1,25 @@
+<div class="bg"></div>
+
+<div class="container py-5">
+
+    <div class="bg-white p-2 p-md-5 rounded">
+
+        <h1 class="mb-4">Login Here</h1>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" #username id="username" placeholder="name@example.com" required>
+            <label for="username">Email address</label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" #userpassword id="password" placeholder="Password" required>
+            <label for="password">Password</label>
+        </div>
+             
+        <button type="submit" class="rounded"
+        (click)="signIn()"
+        >Login</button>
+    </div>
+
+</div>
+

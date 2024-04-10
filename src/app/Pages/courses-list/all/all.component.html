@@ -1,0 +1,36 @@
+<div class="container">
+
+    <label for="course_searcher" class="fs-2 fw-medium mt-5 mb-2">Find Course</label>
+
+    <input class="form-control form-control-lg mb-4" type="text"
+    #course_searcher placeholder="Course Name" aria-label="Course Name"
+    (input)="search_course()" [(ngModel)]="search_text">
+
+    <hr>
+
+    
+
+    <div class="row">
+        <ng-container *ngIf="courses.length !== 0; else nothingFound">
+
+            <h2>
+                Choose the course best suits you
+            </h2>
+            
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3"
+            *ngFor="let course of courses"
+            >
+            
+                <app-course [course]="course"></app-course>
+            
+            </div>
+        </ng-container>
+
+        <ng-template #nothingFound>
+
+            <div>
+                <h2 class="text-center text-secondary">Nothing Found</h2>
+            </div>
+        </ng-template>
+    </div>
+</div>

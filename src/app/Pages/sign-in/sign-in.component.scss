@@ -1,0 +1,36 @@
+.bg{
+    position: absolute;
+    inset: 0;
+    background-color: #28282B;
+    height: 100vh;
+    height: 100dvh;
+
+    z-index: -1;
+}
+
+
+button {
+    background-color: #FF5733;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    
+    width: 100%;
+
+    transition: background 0.3s ease;
+
+    &:hover,
+    &:focus{
+        background-color: #dc3c18;
+    }
+}
+
+  .cancel-button-div{
+    text-align: right;
+    width: 100%;
+  }

@@ -1,0 +1,48 @@
+<header>
+    <div class="container">
+        <nav class="py-2" #nav
+        [ngClass]="{ activated: menu_opened }">
+
+            <div class="company-name custom-nav-item">
+                <a routerLink="" class="fs-3 fw-bold">EAcademy</a>
+            </div>
+
+            
+            <ul class="custom-nav-item navigation">
+                <li><a routerLink="" class="fs-5">Home</a></li>
+                <li><a 
+                    routerLink="Courses/All"  
+                    routerLinkActive="active-nav-btn" 
+                    [routerLinkActiveOptions]="{exact: true}"
+                    class="fs-5"
+                    >Courses</a></li>
+                <li><a routerLink="" class="fs-5">Contact</a></li>
+                <li><a routerLink="" class="fs-5">About</a></li>
+            </ul>
+
+            <ul class="custom-nav-item user-navigation">
+                
+                <ng-container *ngIf="!isLogged; else logged">
+
+                    <li><a routerLink="/SignIn" class="me-4 fs-5">Login</a></li>
+                    <li><a routerLink="/SignUp" class="fs-5 register-btn btn btn-primary">Register</a></li>
+
+                </ng-container>
+
+                <ng-template #logged>
+
+                    <li><p class="m-0 h-100 fs-5 border-0"> {{ user.name }}  </p></li>
+                    <li><button type="button" class="fs-5 register-btn btn btn-primary" (click)="logout()">Log Out</button></li>
+
+                </ng-template>
+
+            </ul>
+
+            <div class="collapse-btn" #collapse_btn 
+                (click)="change_menu()"
+                [ngClass]="{ collapsed: menu_opened }"
+            ></div>
+            
+        </nav>
+    </div>
+</header>

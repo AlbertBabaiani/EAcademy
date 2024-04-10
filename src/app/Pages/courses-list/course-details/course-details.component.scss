@@ -1,0 +1,168 @@
+.courses-detail-container{
+    background-color: #efefef;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+main{
+    width: 64%;
+}
+aside{
+    width: 34%;
+}
+
+.course-details{
+
+    & > div:not(.image),
+    & > section{
+        padding-inline: 3.6rem;
+    }
+
+    section{
+        margin-bottom: 3.6rem;
+    }
+}
+
+.course-details,
+.course-action-items{
+    background: #fff;
+}
+
+.course-banner-image{
+    width: 100%;
+
+    height: clamp(16rem, 40vh, 40rem);
+    height: clamp(16rem, 40dvh, 40rem);
+    
+    object-fit: cover;
+}
+
+hr{
+    border: #DDD 2px solid;
+}
+
+
+
+
+.side-banner{
+    width: 100%;
+    background-color: #28282B;
+    text-align: center;
+    color:white;
+
+    h2{
+        margin: 0;
+        padding-block: 5rem;
+    }
+}
+
+.course-selection{
+    display: flex;
+    width: 100%;
+}
+
+
+.course-selection-personal,
+.course-selection-team{
+    width: 50%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.course-selection-personal{
+    border-bottom: #28282B 2px solid;
+}
+
+.course-selection-team{
+    border-bottom: #dddddd 2px solid;
+}
+
+
+.devider{
+    height: 2px;
+    background: #ddd;
+    position: relative;
+
+    &::before{
+        content: '';
+        aspect-ratio: 1;
+        width: 30px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        border: #ddd 2px solid;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    &::after{
+        content: 'Or';
+        color: #888;
+        font-size: 0.9rem;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+@media (max-width: 991px){
+    .main-container{
+        flex-direction: column;
+    }
+
+    .course-details{
+
+        & > div:not(.image),
+        & > section{
+            padding-inline: 1.4 rem;
+        }
+    
+        section{
+            margin-bottom: 1.4  rem;
+        }
+    }
+
+    main{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+
+    .side-banner{
+        h2{
+            padding-block: 0.6em;
+        }
+    }
+
+    .prev-nect-course{
+        padding-inline: 1rem !important;
+        margin-top: 0 !important;
+        z-index: 10;
+        position: relative;
+    }
+}
+
+
+@media (max-width: 326px) {
+    .prev-nect-course{
+        button{
+            width: 100%;
+
+            &:first-child{
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

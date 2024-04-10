@@ -1,0 +1,162 @@
+<div class="courses-detail-container pt-4">
+
+    <div class="container pb-5">
+
+        <a routerLink="/Courses" type="button" class="btn btn-primary mb-2">Back</a>
+
+        <div class="main-container">
+
+            <main class="course-details shadow p-0">
+
+                <div class="image">
+                    <img [src]="selectedCourse.image" class="course-banner-image">
+                </div>
+
+                <div class="course-title text-center py-3">
+                    <h1>{{ selectedCourse.title }}</h1>
+                </div>
+
+                <div class="d-flex justify-content-between g-3 mb-3">
+                    <div class="course-info-rating">
+                        <b>Course Rating: </b>{{ selectedCourse.rating }}
+                    </div>
+
+                    <div class="course-info-duration">
+                        <b>Duration: </b>{{ selectedCourse.duration }}
+                    </div>
+
+                    <div class="course-info-author">
+                        <b>Author: </b>{{ selectedCourse.author }}
+                    </div>
+                </div>
+
+                <div class="course-desc mb-5">
+                    <p>
+                        {{ selectedCourse.desc }}
+                    </p>
+                </div>
+
+
+
+                <section class="rewiews">
+                    <h2>Students Reviews</h2>
+                    <hr>
+                    <div class="course-fake-rewiews mb-2">
+                        <h3 class="fs-4">Mark Stefan</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                            nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+
+                    <div class="course-fake-rewiews mb-2">
+                        <h3 class="fs-4">Josef Stalin</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        </p>
+                    </div>
+
+                    <div class="course-fake-rewiews mb-2">
+                        <h3 class="fs-4">Ravi Kumar</h3>
+                        <p class="m-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et m veniam, quis nostrud exercitation ullamco laboris 
+                            nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </section>           
+            </main>
+
+            <aside class="course-action-items shadow p-2">
+
+                <div class="side-banner px-3">
+                    <h2>Get Flat 80% Off on this course.</h2>
+                </div>
+
+                <div class="course-selection">
+                    <div class="course-selection-personal">Personal</div>
+                    <div class="course-selection-team">Team</div>
+                </div>
+
+                <div class="details p-3">
+  
+                    <div class="price">
+
+                        <div class="d-flex align-items-center flex-wrap">
+                            <span class="fs-3 fw-bold me-2">
+                            {{ (selectedCourse.price * 0.8).toFixed(0) | currency }}</span>
+                                
+                            <span class="text-secondary fw-bold fs-5 me-3">
+                                <s> {{ selectedCourse.price | currency }} </s>
+                            </span>
+                            
+                            <span class="lead">
+                                20% OFF
+                                
+                            </span>
+                        </div>
+                            
+                        <div class="offer-timer">
+                            <p class="text-danger"><b> 1 Day</b> left at this price.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="buy-course-div my-4">
+                        <button type="button" [routerLink]="'../../CheckOut'" [state]="selectedCourse" class="btn btn-danger w-100">Buy this course</button>
+                    </div>
+
+                    <div class="guarantee-div">
+                        <p class="text-center m-0 my-3">30-Day Money-Back Guarantee Full Lifetime Access</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-wrap gap-4">
+                        <a routerLink="" class="text-black">Gift this course</a>
+                        <a routerLink="" class="text-black">Apply coupon</a>
+                    </div>
+
+
+                    <div class="devider my-5">
+                    </div>
+
+
+                    <div class="subscribe-to">
+                        <h5>
+                            Subscribe to Procademy's top courses
+                        </h5>
+
+                        <p class="my-4">
+                            Get this course, plus 800+ of our top-rated courses, with Personal Plan.
+                            <a routerLink="" class="text-danger">Learn more</a>
+                        </p>
+                    </div>
+
+                    <div class="subscribe-course-div">
+                        <button type="button" class="btn btn-outline-danger w-100 border-2">Start subscription</button>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+
+        <div class="prev-nect-course w-100 d-flex justify-content-between px-5 py-3 bg-white shadow mt-4 flex-wrap">
+            <button type="button" class="btn btn-primary"
+            [disabled]="course_id === 1"
+            [routerLink]="'/Courses/Course/' + (course_id -1 )"
+
+            >Previous course</button>
+            
+            
+            <button type="button" class="btn btn-primary"
+            [disabled]="course_id === all_courses_quantity"
+            [routerLink]="'/Courses/Course/' + (course_id + 1 )"
+
+            >Next course</button>
+        </div>
+
+    </div> 
+
+</div>

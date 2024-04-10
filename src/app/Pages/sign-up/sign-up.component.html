@@ -1,0 +1,35 @@
+<div class="bg"></div>
+
+<div class="container py-5">
+
+    <div class="bg-white p-2 p-md-5 rounded">
+
+        <h1 class="mb-4">Sign Up Here</h1>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" #name id="name" placeholder="John Doe" max="12" required>
+            <label for="name">Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" #username id="username" placeholder="John Doe" max="12" required>
+            <label for="username">User Name</label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" #userpassword id="password" placeholder="Password" max="12" required>
+            <label for="password">Password</label>
+        </div>
+
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" #repeatuserpassword id="repeatuserpassword" placeholder="Password" max="12" required>
+            <label for="repeatuserpassword">Repeat Password</label>
+        </div>
+             
+        <button type="submit" class="rounded"
+        (click)="add_new_user()"
+        >Sign Up</button>
+    </div>
+
+</div>
+

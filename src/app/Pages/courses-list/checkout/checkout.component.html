@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row py-5">
+
+    <div class="col-12 col-lg-6 mb-5">
+
+      <h2 class="payment-heading">Payment Information</h2>
+
+      <form>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="Full_Name"
+            placeholder="Password" required>
+          <label for="Full_Name">Full Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="Card_Number"
+            placeholder="1111-2222-3333-4444" required>
+          <label for="Card_Number">Card Number</label>
+        </div>
+              
+        <label for="Months" class="lead">Month</label>
+        <select class="form-select form-select-lg mb-3" aria-label="Months" id="Month">
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="Decemeber">Decemeber</option>
+        </select>
+        
+        <div class="mb-3 d-flex align-items-center mb-3">
+          <label for="CVV" class="form-label m-0 me-2 lead">CVV</label>
+          <input type="email" class="form-control w-25 form-control-lg" id="CVV" placeholder="111">
+        </div>
+      
+        <button class="btn btn-lg btn-primary w-100">Buy Now</button>
+      </form>
+    </div>
+
+    <div class="col-12 col-lg-6 mb-5">
+        <h2> {{ course.title }} </h2>
+
+        <div class="d-flex align-items-center justify-content-between w-100 mb-3">
+          <p class="m-0 lead">
+            Price
+          </p>
+
+          <p class="m-0 lead">
+            {{ course.price| currency }}
+          </p>
+        </div>
+
+
+        <div class="d-flex align-items-center justify-content-between w-100 mb-3 ">
+          <p class="m-0 lead">
+            Tax
+          </p>
+
+          <p class="m-0 lead">
+            {{ tax | currency }}
+          </p>
+        </div>
+
+        <hr>
+
+
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <p class="m-0 lead">
+            <b>
+              Total
+            </b>
+          </p>
+
+          <p class="m-0 lead">
+            <b>
+              {{ (course.price + tax) | currency }}
+            </b>
+          </p>
+        </div>
+
+        <div>
+          <!-- <table class="table">
+            <tr>
+              <td>{{ course.price }} x 1 Course</td>
+              <td class="price">{{ course.price }} USD</td>
+            </tr>
+            <tr>
+              <td>Discount</td>
+              <td class="price">0.00 USD</td>
+            </tr>
+            <tr>
+              <td>Subtotal</td>
+              <td class="price">{{ course.price }} USD</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td class="price">47.41 USD</td>
+            </tr>
+            <tr class="total">
+              <td>Total</td>
+              <td class="price">{{ course.price +  47.41}}</td>
+            </tr>
+          </table> -->
+      </div>
+  
+    </div>
+
+  </div>
+</div>
