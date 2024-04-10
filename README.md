@@ -1,5 +1,9 @@
 # EAcademy
 
+Interactive Angular Routing Playground - This project is designed as a hands-on learning tool to explore and solidify concepts in Angular routing. Experiment with different routing configurations, route parameters, and navigation techniques.
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
 
 ## Development server
