@@ -1,0 +1,23 @@
+$github-color: rgb(47, 116, 192);
+
+.author{
+    text-align: center;
+    padding-block: 0.6rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.8rem;
+
+    a{
+        font-weight: bold;
+        color: $github-color;
+
+        transition: var(--colorTransition);
+
+        &:focus{
+            outline: 1px solid $github-color;
+        }
+    }
+
+    svg{
+        transform: translateY(-10%);
+    }
+}

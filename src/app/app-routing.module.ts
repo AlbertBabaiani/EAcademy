@@ -8,6 +8,7 @@ import { authenticationCanActivateFnGuard } from './Guards/authentication.guard'
 import { CheckoutComponent } from './Pages/courses-list/checkout/checkout.component';
 import { AllComponent } from './Pages/courses-list/all/all.component';
 import { SignUpComponent } from './Pages/sign-up/sign-up.component';
+import { AboutComponent } from './Pages/about/about.component';
 
 const routes: Routes = [
   {path: 'Courses', component: CoursesListComponent,
@@ -18,6 +19,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'All', pathMatch: 'full' }
     ]
   },
+
+  {path: 'About', component: AboutComponent},
 
   {path: 'SignIn', component: SignInComponent},
   {path: 'SignUp', component: SignUpComponent},

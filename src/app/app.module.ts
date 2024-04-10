@@ -13,6 +13,7 @@ import { SignInComponent } from './Pages/sign-in/sign-in.component';
 import { CheckoutComponent } from './Pages/courses-list/checkout/checkout.component';
 import { AllComponent } from './Pages/courses-list/all/all.component';
 import { SignUpComponent } from './Pages/sign-up/sign-up.component';
+import { AboutComponent } from './Pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SignUpComponent } from './Pages/sign-up/sign-up.component';
     CheckoutComponent,
     AllComponent,
     SignUpComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
