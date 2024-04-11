@@ -2,6 +2,31 @@
 
 Interactive Angular Routing Playground - This project is designed as a hands-on learning tool to explore and solidify concepts in Angular routing. Experiment with different routing configurations, route parameters, and navigation techniques.
 
+## Key Features:
+
+- **Comprehensive Routing:** Implement various routing strategies, including:
+
+  - **Nested Routing:** Structure your application with nested components for efficient organization.
+
+  - **Lazy Loading:** Optimize performance by loading modules on demand as users navigate the application.
+
+  - **Route Parameters and Data:** Pass dynamic data between components using route parameters and data.
+
+  - **Advanced Navigation**: Utilize techniques like programmatic navigation, child activation guards, and route resolvers for a seamless user experience.
+
+- **Sign In**
+- **Sign Up**
+
+## Learning Objectives:
+
+Gain a thorough understanding of advanced Angular routing patterns.
+Master the implementation of secure user authentication and authorization.
+Develop best practices for building robust and scalable Angular applications.
+
+## Hosted on Netlify
+
+The project is hosted on Netlify. You can access it at https://ng-todo-list-three.vercel.app
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
