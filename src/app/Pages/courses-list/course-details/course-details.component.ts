@@ -51,6 +51,10 @@ export class CourseDetailsComponent implements OnInit, OnDestroy{
     })
   }
 
+  scroll_to_top(): void{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   ngOnDestroy(): void {
     if(this.activated_route_subscription){
       this.activated_route_subscription.unsubscribe()

@@ -146,6 +146,7 @@
             <button type="button" class="btn btn-primary"
             [disabled]="course_id === 1"
             [routerLink]="'/Courses/Course/' + (course_id -1 )"
+            (click)="scroll_to_top()"
 
             >Previous course</button>
             
@@ -153,6 +154,7 @@
             <button type="button" class="btn btn-primary"
             [disabled]="course_id === all_courses_quantity"
             [routerLink]="'/Courses/Course/' + (course_id + 1 )"
+            (click)="scroll_to_top()"
 
             >Next course</button>
         </div>
