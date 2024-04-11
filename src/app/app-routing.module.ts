@@ -12,11 +12,10 @@ import { AboutComponent } from './Pages/about/about.component';
 
 const routes: Routes = [
   {path: 'Courses', component: CoursesListComponent,
-    children: [
-      {path: 'All', component: AllComponent},
-      {path: 'Course/:id', component: CourseDetailsComponent},
-      {path: 'CheckOut', component: CheckoutComponent, canActivate: [authenticationCanActivateFnGuard]},
-      {path: '', redirectTo: 'All', pathMatch: 'full' }
+  children: [
+    {path: '', component: AllComponent},
+    {path: 'Course/:id', component: CourseDetailsComponent},
+    {path: 'CheckOut', component: CheckoutComponent, canActivate: [authenticationCanActivateFnGuard]},
     ]
   },
 
