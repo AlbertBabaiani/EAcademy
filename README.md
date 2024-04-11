@@ -25,7 +25,7 @@ Develop best practices for building robust and scalable Angular applications.
 
 ## Hosted on Netlify
 
-The project is hosted on Netlify. You can access it at https://ng-todo-list-three.vercel.app
+The project is hosted on Netlify. You can access it at https://ng-eacademy.netlify.app
 
 ---
 
