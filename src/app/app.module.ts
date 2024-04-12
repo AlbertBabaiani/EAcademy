@@ -14,6 +14,8 @@ import { CheckoutComponent } from './Pages/courses-list/checkout/checkout.compon
 import { AllComponent } from './Pages/courses-list/all/all.component';
 import { SignUpComponent } from './Pages/sign-up/sign-up.component';
 import { AboutComponent } from './Pages/about/about.component';
+import { CustomTitleStrategyService } from './Services/custom-title-strategy.service';
+import { TitleStrategy } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,11 @@ import { AboutComponent } from './Pages/about/about.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: TitleStrategy, useClass: CustomTitleStrategyService
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
